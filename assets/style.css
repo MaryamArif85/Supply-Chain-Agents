@@ -1,0 +1,237 @@
+
+/* ==========================================
+   GLOBAL THEME
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #0b1220;
+    --surface: #111c2e;
+    --surface-light: #18263a;
+    --border: #26364b;
+    --primary: #36a3ff;
+    --teal: #22c5b5;
+    --text: #edf3fa;
+    --muted: #91a3b8;
+    --danger: #f16c78;
+    --success: #38c994;
+    --warning: #eab75c;
+}
+
+html, body, [class*="css"] {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.stApp {
+    background: var(--background);
+    color: var(--text);
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text);
+}
+
+/* ==========================================
+   HIDE DEFAULT STREAMLIT ELEMENTS
+========================================== */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+section[data-testid="stSidebar"] {
+    background: #101a2a;
+    border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] > div {
+    padding-top: 1.5rem;
+}
+
+section[data-testid="stSidebar"] p {
+    color: var(--muted);
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+.main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #f4f8ff;
+    margin-bottom: 0.15rem;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.2rem 0 0.8rem 0;
+}
+
+/* ==========================================
+   KPI CARDS
+========================================== */
+
+div[data-testid="stMetric"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 17px;
+    border-radius: 12px;
+    min-height: 112px;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: var(--muted);
+}
+
+div[data-testid="stMetricValue"] {
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================
+   CUSTOM PANELS
+========================================== */
+
+.custom-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.agent-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+}
+
+.agent-name {
+    font-weight: 700;
+    font-size: 0.98rem;
+    color: var(--text);
+}
+
+.agent-description {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 7px;
+}
+
+/* ==========================================
+   STATUS LABELS
+========================================== */
+
+.status-online {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.status-warning {
+    color: var(--warning);
+    font-weight: 700;
+}
+
+.status-danger {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.stButton > button,
+.stFormSubmitButton > button {
+    background: linear-gradient(135deg, #2386db, #1767bb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    min-height: 42px;
+    transition: 0.2s ease;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background: linear-gradient(135deg, #36a3ff, #2386db);
+    border: none;
+    color: white;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"] {
+    background: var(--surface-light);
+    color: var(--text);
+    border-color: var(--border);
+    border-radius: 8px;
+}
+
+/* ==========================================
+   TABLES
+========================================== */
+
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ==========================================
+   DIVIDERS
+========================================== */
+
+hr {
+    border-color: var(--border);
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+========================================== */
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+
+    .custom-panel {
+        padding: 12px;
+    }
+
+    div[data-testid="stMetric"] {
+        padding: 12px;
+        min-height: 95px;
+    }
+}
