@@ -756,7 +756,7 @@ separate parts of the application, so a successful page load does not
 guarantee a successful model call.
 
 ------------------------------------------------------------------------
-Check live app 
+Check live app  https://supply-chain-agents-wfseyc8l6rfyevmmgrp8bn.streamlit.app/
 ------------------------------------------------------------------------
 
 ## 🚧 Limitations and Future Improvements
